@@ -1,0 +1,655 @@
+--LocalPlayer Name
+local Player = game.Players.LocalPlayer
+--Discord Text
+http_request({Url = "https://discord.com/api/webhooks/1037163884794101861/GYr-Ukzcn76-7B82kHiWLwKNqmLLI_TUbitkf2R3C5nJuRgm9iHpu4JqCd1sf1AedPH9", Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game:GetService('HttpService'):JSONEncode({content = "This Person Used DreadzHub! Their Name Is " ..Player.Name.. "!"})})
+--Main
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "Loading DreadzHub...";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+wait(3)
+local Window = Library.CreateLib("DreadzHub", "BloodTheme")
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "DreadzHub Loaded! Signed In As, "..Player.Name.."!";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+--Tabs
+local Tab1 = Window:NewTab("Links")
+local Tab2 = Window:NewTab("GUIS")
+--Links
+local Section = Tab1:NewSection("Links:")
+Section:NewButton("Copy YT Link", "Copy My YT Link", function()
+    setclipboard("https://www.youtube.com/channel/UCqR74O-JloMP2r5X7-0XJQQ")
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "DreadzHub";
+	Text = "YT Link Copied, "..Player.Name.."!";
+	Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+Duration = 3;
+end)
+Section:NewButton("Copy Discord Server Link", "Copy My Discord Server Link", function()
+    setclipboard("https://discord.gg/dzSHV7kGpG")
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "DreadzHub";
+	Text = "Discord Server Link Copied, "..Player.Name.."!";
+	Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+Duration = 3;
+end)
+--GUIS
+local Section = Tab2:NewSection("GUIS:")
+Section:NewButton("Anti-AFK", "Use This GUI", function()
+    wait(0.5)local ba=Instance.new("ScreenGui")
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script"ca.TextColor3=Color3.new(0,1,1)
+ca.TextSize=22;da.Parent=ca
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="DreadzHub"
+_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
+end)
+Section:NewButton("Hitbox Expander", "Use This GUI", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/J9bj6TuD"))()
+end)
+Section:NewButton("Grind MM2 Coins", "Use This GUI", function()
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "Loading DreadzHub...";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+wait(3)
+local Window = Library.CreateLib("DreadzHub", "BloodTheme")
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "DreadzHub Loaded!";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+local Tab = Window:NewTab("Farm")
+local Section = Tab:NewSection("Farming:")
+Section:NewToggle("Farm Coins", "Op Coolio Script", function(state)
+    if state then
+		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "Auto-Farm = True";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+        getgenv().CoinFarm = true
+while getgenv().CoinFarm == true do
+    getgenv().TpDelay = 2
+loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/6cbdf3cd3182d2889d2af766da9a2286/raw/3b3872fa207a24a6e78fc4b5a07c37cead7842df/casgg"))()
+wait(10)
+end
+    else
+		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "Auto-Farm = False";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+        getgenv().CoinFarm = false
+while getgenv().CoinFarm == true do
+    getgenv().TpDelay = 2
+loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/6cbdf3cd3182d2889d2af766da9a2286/raw/3b3872fa207a24a6e78fc4b5a07c37cead7842df/casgg"))()
+wait(10)
+end
+    end
+end)
+local Section = Tab:NewSection("Config:")
+Section:NewKeybind("Toggle UI", "Toggle The UI With Key On Your Keyboard!", Enum.KeyCode.E, function()
+	Library:ToggleUI()
+		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "Toggled UI!";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+end)
+end)
+Section:NewToggle("Rank Simulator Farm", "Farm", function(state)
+    if state then
+    getgenv().MainStars = true
+getgenv().BeachStars = true
+getgenv().JungleStars = true
+getgenv().HellStars = true
+getgenv().CaveStars = true
+getgenv().IceStars = true
+getgenv().CandyStars = true
+getgenv().Halloween = true
+getgenv().AquaStars = true
+ 
+    spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().MainStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+    spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().BeachStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+    spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().JungleStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().HellStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().CaveStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().IceStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().CandyStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+    spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().Halloween then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Halloween:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+    spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().AquaStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Aqua:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)    
+    else
+        getgenv().MainStars = false
+getgenv().BeachStars = false
+getgenv().JungleStars = false
+getgenv().HellStars = false
+getgenv().CaveStars = false
+getgenv().IceStars = false
+getgenv().CandyStars = false
+getgenv().Halloween = false
+getgenv().AquaStars = false
+ 
+    spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().MainStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+    spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().BeachStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+    spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().JungleStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().HellStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().CaveStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().IceStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+ 
+spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().CandyStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Candy:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+ 
+    spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().Halloween then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Halloween:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+    spawn(function()
+     local playerHead = game.Players.LocalPlayer.Character.Head
+     while wait() do
+        if not getgenv().AquaStars then break end
+        for i, v in pairs(game:GetService("Workspace").Spawners.Aqua:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(playerHead, v.Parent, 0)
+            wait()
+            end
+        end
+     end
+end)
+    end
+end)
+Section:NewButton("Breaking Point Farm (OP)", "Use This GUI", function()
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "Loading DreadzHub...";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+wait(3)
+local Window = Library.CreateLib("DreadzHub | Breaking Point Auto-Farm", "BloodTheme")
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "DreadzHub Loaded!";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+local Tab = Window:NewTab("Farm")
+local Section = Tab:NewSection("Auto-Farm:")
+Section:NewToggle("Auto-Farm", "Auto-Farm Credits", function(state)
+    if state then
+        getgenv().AutoFarm = true
+loadstring(game:HttpGet('https://pastebin.com/raw/g5K7pnQa'))()
+    else
+        getgenv().AutoFarm = false
+loadstring(game:HttpGet('https://pastebin.com/raw/g5K7pnQa'))()
+    end
+end)
+Section:NewToggle("Server Hop", "Toggle ServerHop", function(state)
+    if state then
+        getgenv().ServerHop = true
+loadstring(game:HttpGet('https://pastebin.com/raw/g5K7pnQa'))()
+    else
+        getgenv().ServerHop = false
+loadstring(game:HttpGet('https://pastebin.com/raw/g5K7pnQa'))()
+    end
+end)
+ 
+end)
+        Section:NewButton("Bss Script", "Use This Script!", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/Syc70B4Q"))()
+end)
+Section:NewToggle("Collect All Pets Auto-Farm", "Use This Script!", function(state)
+    if state then
+        getgenv().toggle = true
+getgenv().invis = true
+loadstring(game:HttpGet("https://pastebin.com/raw/HUmWGiz0"))()
+    else
+        getgenv().toggle = false
+getgenv().invis = false
+loadstring(game:HttpGet("https://pastebin.com/raw/HUmWGiz0"))()
+    end
+end)
+Section:NewButton("PSX Get All Gamepasses", "Use This Script!", function()
+    local player = game:GetService("Players").LocalPlayer;
+local dick = player.PlayerScripts.Scripts.GUIs.Inventory
+for i,v in pairs(getreg()) do
+if typeof(v)=="table" then
+  if v.Owns and typeof(v.Owns)=="function" then
+     v.Owns = function()
+        return true
+     end
+  end
+end
+end
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "Got All Gamepasses!";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+end)
+--Premium
+local Tab3 = Window:NewTab("Premium Scripts")
+local Section = Tab3:NewSection("Want Premium Scripts?")
+Section:NewLabel("All You Have To Do Is...")
+Section:NewLabel("Go To Our Discord...")
+Section:NewLabel("Create A Ticket...")
+Section:NewLabel("Buy The Gamepass Linked...")
+Section:NewLabel("We Will Verify You And...")
+Section:NewLabel("We Will Give You The Key!")
+Section:NewTextBox("Enter Key Here!", "Enter Key", function(txt)
+	if (txt) == "PwwrPgNQrA3zKltJkvf1YxEa3pWubH" then
+                		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "Correct Key, Getting Out Of The Peasent Scripts...";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+        wait(3)
+        --Premium Window:
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Premium Scripts", "BloodTheme")
+        local Tab = Window:NewTab("Scripts")
+        local Section = Tab:NewSection("Premium Scripts:")
+Section:NewToggle("Rank Simulator Halloween Dupe", "Use This Script!", function(state)
+    if state then
+--Main
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "DreadzHub";
+	Text = "Script Running, "..Player.Name.."!";
+	Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+Duration = 5;
+getgenv().Dupe = true
+while getgenv().Dupe == true do
+local A_1 = "Halloween"
+local A_2 = "Single"
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.EggOpened
+Event:InvokeServer(A_1, A_2)
+local A_1 = "Scary"
+local A_2 = "Single"
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.EggOpened
+Event:InvokeServer(A_1, A_2)
+local A_1 = "Horrifying"
+local A_2 = "Single"
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.EggOpened
+Event:InvokeServer(A_1, A_2)
+local teleport_table = {
+    location1 = Vector3.new(623.0762329101562, -7476.17822265625, 59299.75390625),
+    location2 = Vector3.new(616.882568359375, -7476.17822265625, 59295.16015625),
+location3 = Vector3.new(608.876220703125, -7476.17822265625, 59287.4296875),-- your desired position
+}
+ 
+local tween_s = game:GetService('TweenService')
+local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+ 
+local lp = game.Players.LocalPlayer
+ 
+function bypass_teleport(v)
+    if lp.Character and 
+    lp.Character:FindFirstChild('HumanoidRootPart') then
+        local cf = CFrame.new(v)
+        local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+        a:Play()
+        -- a.Completed:Wait()
+        -- print('Teleporting Done!')
+    end
+end
+ 
+bypass_teleport(teleport_table.location1)
+wait(1)
+bypass_teleport(teleport_table.location2)
+wait(1)
+bypass_teleport(teleport_table.location3)
+wait(0.1)
+end
+    else
+--Main
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "DreadzHub";
+	Text = "Script Not Running, "..Player.Name.."!";
+	Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+Duration = 5;
+getgenv().Dupe = false
+while getgenv().Dupe == true do
+local A_1 = "Halloween"
+local A_2 = "Single"
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.EggOpened
+Event:InvokeServer(A_1, A_2)
+local A_1 = "Scary"
+local A_2 = "Single"
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.EggOpened
+Event:InvokeServer(A_1, A_2)
+local A_1 = "Horrifying"
+local A_2 = "Single"
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.EggOpened
+Event:InvokeServer(A_1, A_2)
+local teleport_table = {
+    location1 = Vector3.new(623.0762329101562, -7476.17822265625, 59299.75390625),
+    location2 = Vector3.new(616.882568359375, -7476.17822265625, 59295.16015625),
+location3 = Vector3.new(608.876220703125, -7476.17822265625, 59287.4296875),-- your desired position
+}
+ 
+local tween_s = game:GetService('TweenService')
+local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+ 
+local lp = game.Players.LocalPlayer
+ 
+function bypass_teleport(v)
+    if lp.Character and 
+    lp.Character:FindFirstChild('HumanoidRootPart') then
+        local cf = CFrame.new(v)
+        local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+        a:Play()
+        -- a.Completed:Wait()
+        -- print('Teleporting Done!')
+    end
+end
+ 
+bypass_teleport(teleport_table.location1)
+wait(1)
+bypass_teleport(teleport_table.location2)
+wait(1)
+bypass_teleport(teleport_table.location3)
+wait(0.1)
+end
+    end
+end)
+Section:NewButton("MM2 Dupe", "Use This GUI", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/HDHvXwU1"))()
+end)
+Section:NewLabel("BP Dupe Prices:")
+Section:NewLabel("/E Rain = 3 Credits")
+Section:NewLabel("Candy Crown = 10K Credits")
+Section:NewLabel("Royal Red = 10K Credits")
+Section:NewLabel("Knife Antlers = 10K Credits")
+Section:NewDropdown("BP Dupe", "Use This Script!", {"/E Rain", "Candy Crown", "Royal Red", "Knife Antlers"}, function(Value)
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "DreadzHub";
+	Text = "Duping, "..(Value).."...";
+	Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+Duration = 5;
+wait(5)
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "DreadzHub";
+	Text = "Duped, "..(Value).."!";
+	Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+Duration = 5;
+--Dupes
+if (Value) == "/E Rain" then
+local args = {
+    [1] = 66,
+    [2] = "Animations",
+    [3] = "Exclusive"
+}
+
+game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
+end
+if (Value) == "Candy Crown" then
+local args = {
+    [1] = 66,
+    [2] = "Knife Skins",
+    [3] = "Winter Gift"
+}
+
+game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
+end
+if (Value) == "Royal Red" then
+local args = {
+    [1] = 66,
+    [2] = "Chair Skins",
+    [3] = "Winter"
+}
+
+game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
+end
+if (Value) == "Knife Antlers" then
+local args = {
+    [1] = 66,
+    [2] = "Accessories",
+    [3] = "Knife Antlers"
+}
+
+game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
+end
+end)
+        else
+        		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "Wrong Key L Bozo!";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+    end
+end)
+--Config
+local Tab4 = Window:NewTab("Config")
+local Section = Tab4:NewSection("Config:")
+Section:NewKeybind("Toggle UI", "Toggle The UI With Key On Your Keyboard!", Enum.KeyCode.E, function()
+	Library:ToggleUI()
+		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "DreadzHub";
+			Text = "Toggled UI!";
+			Icon = "rbxthumb://type=Asset&id=11002973134&w=150&h=150"})
+		Duration = 3;
+end)
